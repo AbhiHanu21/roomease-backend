@@ -1,4 +1,3 @@
-
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -11,6 +10,7 @@ app.use(bodyParser.json());
 
 app.post("/login", (req, res) => {
     const { username, password } = req.body;
+
     if (username === "test" && password === "1234") {
         res.json({ message: "Login successful!" });
     } else {
@@ -19,5 +19,5 @@ app.post("/login", (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`✅ Server running on port ${PORT}`);
 });
